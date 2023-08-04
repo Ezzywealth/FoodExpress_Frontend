@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Button, Text, View } from 'react-native';
 import { globalStyles } from '../styles/globalStyles';
 
 const ReviewDetails = ({ navigation, route }: any) => {
@@ -8,6 +8,12 @@ const ReviewDetails = ({ navigation, route }: any) => {
 			<Text>{route.params.rating}</Text>
 			<Text>{route.params.title}</Text>
 			<Text>{route.params.body}</Text>
+			<Button
+				title='Go back'
+				onPress={() => {
+					navigation.goBack();
+				}}
+			/>
 		</View>
 	);
 };
